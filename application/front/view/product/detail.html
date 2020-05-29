@@ -1,0 +1,154 @@
+<div class="container mb-20">
+    <div class="panel">
+        <div class="panel-bd">
+            <div class="preview">
+
+                <div class="focusbox">
+                    <img src="/static/assets/front/images/no_product.jpg" alt="" width="360" height="405"
+                         data-bd-imgshare-binded="1">
+                </div>
+            </div>
+            <div class="iteminfo">
+                <h2 class="border-bottom-1 text-truncate">
+                    {$data.name}
+                </h2>
+
+
+                <!--有型号-->
+                <div class="attribute clearfix">
+                    <div class="name">{if $lan=='en'}Category{else /}分类{/if}</div>
+                    <div class="value"></div>
+                </div>
+                <!--<div class="attribute clearfix">
+                    <div class="name">厂商</span></div>
+                    <div class="value"></div>
+                </div>-->
+                <div class="attribute clearfix">
+                    <div class="name">{if $lan=='en'}Package{else /}封装{/if}</div>
+                    <div class="value">{$data.package}</div>
+                </div>
+                <!--下架时隐藏的产品属性[[-->
+                <div class="">
+                    <div class="attribute clearfix">
+                        <div class="name">{if $lan=='en'}Batch_num{else /}批号{/if}</div>
+                        <div class="value">{$data.batch_num}</div>
+                    </div>
+                    <div class="attribute clearfix">
+                        <div class="name">{if $lan=='en'}Position{else /}仓库{/if}</div>
+                        <div class="value">{$data.position}</div>
+                    </div>
+                    <div class="attribute clearfix">
+                        <div class="name">{if $lan=='en'}Stock{else /}数量{/if}</div>
+                        <div class="value">{$data.stock}</div>
+                    </div>
+                    <!--已有标价[[-->
+                    <div class="attribute price clearfix">
+                        <div class="name">{if $lan=='en'}Inquiry{else /}询价{/if}</div>
+                        <!--询价[[-->
+                        <div class="attr-btns">
+                            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1109170345&amp;site=qq&amp;menu=yes"
+                               class="sidebar-qq" target="_blank"><span class="icon-qq"></span>QQ客服</a>
+                        </div>
+                        <!--询价]]-->
+                    </div>
+                    <!--已有标价[[-->
+                </div>
+
+                <!--下架时隐藏的产品属性[[-->
+                <!--下架后[[-->
+                <div class="xiajia hide">
+                    <div class="xiajia-con">
+                        <div class="fz-18 mb-5">非常抱歉</div>
+                        <div class="c-666 mb-20">您查看的商品已经下架了！</div>
+                        <div>
+                            <button class="btn btn-primary btn-lg">去产品库搜搜</button>
+                        </div>
+                    </div>
+                </div>
+                <!--下架后]]-->
+            </div>
+            <div class="detail-contact">
+                <div class="company-name text-truncate">{if $lan=='en'}Norton Electronic Technology{else /}诺顿电子科技有限公司{/if}</div>
+                <div class="detail-contact-info">
+                    <ul>
+                        <li>
+                            <span class="contact-tit">{if $lan=='en'}Tel：{else /}电  话：{/if}</span>
+                            <div>
+                                <div class="text-truncate"><strong class="c-h">755-83957712</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-tit">{if $lan=='en'}Fax：{else /}传  真：{/if}</span>
+                            <div class="fz-12">755-83957713</div>
+                        </li>
+                        <li>
+                            <span class="contact-tit">{if $lan=='en'}Phone：{else /}手 机：{/if}</span>
+                            <div class="fz-12">13728653331</div>
+                        </li>
+                        <li>
+                            <span class="contact-tit">Q Q：</span>
+                            <div class="fz-12">
+                                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=163790&amp;site=qq&amp;menu=yes"
+                                   class="sidebar-qq" target="_blank"><span class="icon-qq"></span>QQ客服</a>
+
+                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-tit">Email：</span>
+                            <div>163790@qq.com</div>
+                        </li>
+                        <li>
+                            <span class="contact-tit">{if $lan=='en'}Location：{else /}地址：{/if}</span>
+                            <div>{if $lan=='en'}28J,ABlock .Duhui 100,Zhonghang Rd Futian Area .Shenzhen{else /}深圳市福田区中航路都汇100号A座28J{/if}</div>
+                            <div>{if $lan=='en'}Fl.,10Fourseas Buiding 208-212Naathan Rd Jordan Kowloon Hongkong
+                                {else /}香港九龙佐敦道208-212Naathan号福海大厦10楼{/if}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="main" style=" ">
+        <div class="tab j-tab mb-20" id="tab1">
+            <ul class="tab-head clearfix j-tab-head">
+                <li class="j-tab-title cur"><a href="javascript:;" target="_self">{if $lan=='en'}Detail{else /}详细信息{/if}</a></li>
+            </ul>
+            <div class="tab-con j-tab-con">
+                <!--详细信息[[-->
+                <div>
+                    <div class="mb-10">{if $lan=='en'}Product Attributes{else /}产品属性{/if}</div>
+                    <table class="table table-line no-hover mb-20">
+                        <tbody>
+                        <tr>
+                            <td class="bc-tint2 c-999" width="80">{if $lan=='en'}Brand{else /}品牌{/if}</td>
+                            <td width="300"></td>
+                            <td class="bc-tint2 c-999" width="80">{if $lan=='en'}Batch_num{else /}批号{/if}</td>
+                            <td>{$data.batch_num}</td>
+                        </tr>
+                        <tr>
+                            <td class="bc-tint2 c-999">{if $lan=='en'}Package{else /}封装{/if}</td>
+                            <td width="300">{$data.package}</td>
+                            <td class="bc-tint2 c-999">{if $lan=='en'}Position{else /}仓库{/if}</td>
+                            <td>{$data.position}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="mb-10">{if $lan=='en'}Transaction Description{else /}交易说明：{/if}</div>
+                    <ul class="c-666">
+                        <li class="mb-20">{$data.remark}</li>
+                    </ul>
+                    <div class="mb-10">
+                    </div>
+                </div>
+                <!--详细信息]]-->
+            </div>
+        </div>
+
+        <input type="hidden" value="哈哈哈哈哈哈哈哈哈22222" id="jiaThis-text2">
+    </div>
+</div>
+
+<!-- main-content -->

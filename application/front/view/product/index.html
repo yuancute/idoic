@@ -1,0 +1,94 @@
+<style>
+    .list-page {
+        text-align: center;
+        padding: 15px 15px;
+    }
+
+    .pagination {
+        float: right;
+        margin: 0 !important;
+        padding: 10px 10px;
+        background: #fff;
+    }
+
+    .pagination li {
+        border: 1px solid #e6e6e6;
+        padding: 3px 8px;
+        display: inline-block;
+
+    }
+    .pagination li span{
+        text-decoration: none;
+    }
+    .pagination .active {
+        background-color: #46A3FF;
+        color: #fff;
+    }
+
+    .pagination .disabled {
+        color: #aaa;
+    }
+</style>
+<div class="container">
+    <div class="main">
+        <div class="panel">
+            <div class="panel-bd">
+                <div class="list-sort">
+                    <div class="form-input">
+                        <span class="tip" id="tipproid"></span>
+                        <i class="icon-search"></i>
+                        <input class="input-text" type="search" maxlength="50" id="txtSearchProductInfo"
+                               placeholder="{if $lan=='en'}Please enter the product name you want to search{else /}请输入您要搜索的产品型号{/if}">
+                    </div>
+                    <!--<div class="tum">
+                        <span class="mr-5">共有<span class="c-h" id="TotalCountID">19954</span>条库存</span>
+                    </div>-->
+                    <div class="sort">
+                        <button class="btn btn-light mr-10" id="submit-btn" type="button">{if $lan=='en'}Search{else /}搜索{/if}</button>
+                    </div>
+                </div>
+                <table class="table" id="js-tbList">
+                    <thead>
+                    <tr>
+                        <th width="260">{if $lan=='en'}Name{else /}型号/型号规格{/if}</th>
+                        <th width="35">&nbsp;</th>
+                        <th width="100">{if $lan=='en'}Category{else /}分类{/if}</th>
+                        <th width="100">{if $lan=='en'}Brand{else /}品牌{/if}</th>
+                        <th width="80">{if $lan=='en'}Package{else /}封装{/if}</th>
+                        <th width="50">{if $lan=='en'}Batch_num{else /}批号{/if}</th>
+                        <th class="text-right" width="50">{if $lan=='en'}Stock{else /}数量{/if}</th>
+                        <th class="text-right" width="50"></th>
+                        <th class="text-right" width="55">{if $lan=='en'}Inquiry{else /}询价{/if}</th>
+                    </tr>
+                    </thead>
+                    <tbody id="js-productList">
+                    {volist name ='list' id='vo'}
+                    <tr>
+                        <td><span class="max-p-tit"><a
+                                href="{:url('front/product/detail',['id'=>$vo.id])}"
+                                target="_blank"><span>{$vo.name}</span></a></span>&nbsp;
+                        </td>
+                        <td class="table-view"></td>
+                        <td><p></p></td>
+                        <td><p>{$vo.brand}</p></td>
+                        <td><p>{$vo.package}</p></td>
+                        <td><p>{$vo.batch_num}</p></td>
+                        <td><p class="text-right">{$vo.stock}</p></td>
+                        <td><p class="text-right"></p></td>
+                        <td class="text-right"><a style="color: #fff" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1109170345&amp;site=qq&amp;menu=yes"
+                                                  class="sidebar-qq" target="_blank">QQ客服</a></td>
+                    </tr>
+                    {/volist}
+                    {if count($list)<1}
+                    <tr><td colspan="9" class="index-no-data">暂无数据</td></tr>
+                    {/if}
+                    </tbody>
+                </table>
+                <div class="list-page">
+                    {$list|raw}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main-content -->

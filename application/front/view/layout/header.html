@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{if $lan=='en'}Norton Electronic Technology{else /}诺顿电子科技有限公司{/if}</title>
+    <link rel="stylesheet" href="/static/assets/front/css/style.css">
+    <link rel="stylesheet" href="/static/assets/front/css/index.css">
+    <script type="text/javascript" src="/static/assets/front/js/jquery.min.js"></script>
+</head>
+<body class="page-index">
+<div class="header">
+    <div class="container">
+        <div class="header-logo">
+            <a href="{:url('/front/home/index')}" title="">
+                <img src="/static/assets/front/images/logo.png" width="145" height="38" alt="">
+            </a>
+        </div>
+        <div class="header-title">
+            <div class="header-name">
+                <a href="{:url('/front/home/index')}" title="{if $lan=='en'}Norton Electronic Technology{else /}诺顿电子科技有限公司{/if}">
+                    {if $lan=='en'}Norton Electronic Technology{else /}诺顿电子科技有限公司{/if}
+                </a>
+            </div>
+        </div>
+        <div class="search">
+            <form class="form" onsubmit="return false" id="j-form-shop-search">
+                <span class="tip j-tip"></span>
+                <input type="text" class="input-text" maxlength="50" placeholder="{if $lan=='en'}Please enter the product name you want to search{else /}请输入您要搜索的产品型号{/if}" id="topSearchProductInfo">
+                <input type="button" id="top-submit"  class="btn btn-default btn-shop-search j-shop-search" value="{if $lan=='en'}search{else /}搜索{/if}">
+                {if $lan=='zh'}
+                    <a href="{:url('front/home/index',['lan'=>'en'])}"><input type="button" class="btn btn-primary j-all-search" value="English"></a>
+                {else /}
+                    <a href="{:url('front/home/index',['lan'=>'zh'])}"><input type="button" class="btn btn-primary j-all-search" value="中文"></a>
+                {/if}
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- header ]] -->
+<div class="signs">
+    <div class="container">
+        <div class="logo">
+            <div class="logo-mask"></div>
+            <div class="logo-img">
+                <img src="/static/assets/front/images/shop_default.png" alt="logo">
+            </div>
+        </div>
+        <h1 class="title">
+            {if $lan=='en'}Norton Electronic Technology{else /}诺顿电子科技有限公司{/if}
+        </h1>
+        <div class="main-products new-font-style">
+            <span>{if $lan=='en'}Main products{else /}主营产品{/if}  <i class="icon-dot new-font-style">:</i></span>
+            <span class="new-font-style"></span>
+        </div>
+    </div>
+</div>
+<!-- sign-->
+<div class="nav">
+    <div class="container">
+        <ul class="nav-list">
+            <li class="{if $controller == 'Home'}active{/if}"><a href="{:url('/front/home/index')}" rel="nofollow">{if $lan=='en'}Home{else /}首页{/if}</a></li>
+            <li class="{if $controller == 'Product'}active{/if}"><a href="{:url('/front/product/index')}" rel="nofollow">{if $lan=='en'}Products{else /}产品{/if}</a></li>
+            <li class="{if $controller == 'Profile'}active{/if}"><a href="{:url('/front/profile/index')}" rel="nofollow">{if $lan=='en'}Company Introduction{else /}公司介绍{/if}</a></li>
+        </ul>
+    </div>
+    <div class="shop-nav-hover" style="left: 106.5px; width: 0px; opacity: 0;"></div>
+</div>
+<!-- nav-->

@@ -1,0 +1,20 @@
+<div class="footer">
+    <div class="container">
+        <div class="copyright">
+            <span><a href="{:url('front/home/index')}"> www.idoic.com</a></span>
+        </div>
+    </div>
+</div>
+<!--footer -->
+<script type="text/javascript">
+    $("#top-submit").click(function(){
+        var text = $("#topSearchProductInfo").val();
+        window.location = "/front/product/index?text="+text;
+    })
+    $("#submit-btn").click(function(){
+        var text = $("#txtSearchProductInfo").val();
+        window.location = "/front/product/index?text="+text;
+    })
+</script>
+</body>
+</html>
